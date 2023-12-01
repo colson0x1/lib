@@ -1,0 +1,22 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colson0x1/lib.git"
+  },
+  "author": "COLSON",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colson0x1/lib/issues"
+  },
+  "homepage": "https://github.com/colson0x1/lib#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
