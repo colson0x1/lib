@@ -1,12 +1,19 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: './src/app.ts',
+  devServer: {
+    static: {
+      directory: path.join(__dirname)
+    } 
+  },
   output: {
     filename: 'bundle.js',
     // path should match tsconfig.json outDir's path
     // but webpack requires an absolute path
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/dist/'
   },
   // wireup generated source map to the bundle
   devtool: 'inline-source-map',
