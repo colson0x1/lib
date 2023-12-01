@@ -1,7 +1,8 @@
 const path = require('path');
+const cleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/app.ts',
   devServer: {
     static: {
@@ -13,10 +14,9 @@ module.exports = {
     // path should match tsconfig.json outDir's path
     // but webpack requires an absolute path
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
   },
-  // wireup generated source map to the bundle
-  devtool: 'inline-source-map',
+  // disable source map
+  devtool: false,
   // add TypeScript support for webpack
   module: {
     rules: [
@@ -33,4 +33,8 @@ module.exports = {
     // make webpack look for .ts, .js files
     extensions: ['.ts', '.js'],
   },
+  plugins: [
+    // clear dist dir before new output is written for latest changes
+    new CleanPlugin.CleanWebpackPlugin(),
+  ],
 };
