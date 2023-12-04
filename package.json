@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/colson0x1/lib#readme",
   "devDependencies": {
+    "@types/google.maps": "^3.54.10",
     "clean-webpack-plugin": "^4.0.0",
     "lite-server": "^2.6.1",
     "ts-loader": "^9.5.1",
