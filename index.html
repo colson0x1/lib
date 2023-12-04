@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>lib</title>
-    <script type="module" src="dist/bundle.js"></script>
+    <link rel="stylesheet" href="./app.css" />
+    <script src="dist/bundle.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div id="map">
+      <p>Enter your address!</p>
+    </div>
+    <form>
+      <input type="text" id="address" />
+      <button type="submit">Search Location</button>
+    </form>
+  </body>
 </html>
